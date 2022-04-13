@@ -1,4 +1,5 @@
-@include('header');
+@extends('user.layouts.master')
+@section('content')
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
@@ -605,4 +606,4 @@
 </div>
 </section>
 <!-- Product Section End -->
-@include('footer');
+@stop
