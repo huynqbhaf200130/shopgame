@@ -32,10 +32,8 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html">
-                        <video>
-                            <source src="asset{{'video/Shopgame.mp4'}}">
-                        </video>    
+                        <a href="">
+                            <img src="{{asset('img/logo.png')}}" alt="">
                         </a>
                     </div>
                 </div>
