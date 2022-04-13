@@ -331,7 +331,7 @@ ol {
 }
 
 .header__logo {
-	padding: 20px 0 17px;
+	padding: 10px 0 ;
 }
 
 .header__logo a {
@@ -346,7 +346,7 @@ ol {
 	list-style: none;
 	display: inline-block;
 	position: relative;
-	margin-right: 16px;
+	margin-right: 29px;
 }
 
 .header__menu ul li.active a {
@@ -363,7 +363,13 @@ ol {
 	opacity: 1;
 	visibility: visible;
 }
-
+.header__menu ul li .dropdown li:hover {
+	background-color: #e53637;
+	color: #ffffff;
+}
+.header__menu ul li .dropdown li a:hover {
+	color: #ffffff;
+}
 .header__menu ul li:hover .dropdown li a {
 	background: transparent;
 }
@@ -417,6 +423,8 @@ ol {
 	top: 2px;
 }
 
+/*-------Header_right----------*/
+
 .header__right {
 	text-align: right;
 	padding: 20px 0 15px;
@@ -438,7 +446,7 @@ ol {
 }
 
 /*---------------------
-  Hero
+  
 -----------------------*/
 
 .hero {
@@ -1934,7 +1942,7 @@ ol {
 .footer {
 	background: #070720;
 	padding-top: 60px;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 	position: relative;
 }
 
@@ -1971,7 +1979,7 @@ ol {
 	list-style: none;
 	display: inline-block;
 	position: relative;
-	margin-right: 40px;
+	margin-right: 80px;
 }
 
 .footer__nav ul li:last-child {
