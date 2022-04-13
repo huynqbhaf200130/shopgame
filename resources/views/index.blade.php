@@ -4,7 +4,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero__slider owl-carousel">
-                <div class="hero__items set-bg" data-setbg="../img/hero/hero-1.jpg">
+                <div class="hero__items set-bg" data-setbg="{{asset('img/hero/hero-1.jpg')}}">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -16,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__items set-bg" data-setbg="../img/hero/hero-1.jpg">
+                <div class="hero__items set-bg" data-setbg="{{asset('img/hero/hero-1.jpg')}}">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__items set-bg" data-setbg="../img/hero/hero-1.jpg">
+                <div class="hero__items set-bg" data-setbg="{{asset('img/hero/hero-1.jpg')}}">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -65,7 +65,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="../img/trending/trend-1.jpg">
+                                    <div class="product__item__pic set-bg" data-setbg="{{asset('img/trending/trend-1.jpg')}}">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -81,7 +81,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="../img/trending/trend-2.jpg">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-2.jpg">
                                         <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
