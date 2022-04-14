@@ -42,8 +42,7 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="index">Home</a></li>
-                                <li><a href="./categories.html">Product </a>
-                                </li>
+                                <li><a href="./categories.html">Product</a></li>
                                 <li><a href="./blog.html">Blog</a></li>
                                 <li><a href="#">Cart</a></li>
                             </ul>
@@ -56,8 +55,12 @@
                     <li><a href="#" class="search-switch"><span class="icon_search"></span></a></li>
                     <li><a href="login"><span class="icon_profile"></span><span class="arrow_carrot-down"></span></a>
                         <ul class="dropdown">
-                                        <li><a href="user/signup">Sign Up</a></li>
-                                        <li><a href="user/login">Login</a></li>
+                                        @if(Auth::check())
+                                        <li><a href="logout">Log out</a></li>
+                                        @else
+                                        <li><a href="signup">Sign Up</a></li>
+                                        <li><a href="login">Login</a></li>
+                                        @endif
                                     </ul>
                         </li>
                     </ul>

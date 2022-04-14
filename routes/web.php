@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,12 @@ use App\Http\Controllers\CategoryController;
 Route::get('index', function () {
     return view('index');
 });
-Route::get('user/index', function () {
-    return view('index');
+
+Route::group(['prefix'=>''], function(){
+    Route::get('login',[UserController::class,'getLogin']);
+    Route::post('login',[UserController::class,'postLogin']);
+    Route::get('signup',[UserController::class,'getSignup']);
+    Route::post('signup',[UserController::class,'postSignup']);
 });
 
 Route::group(['prefix'=>'user'], function(){
@@ -27,21 +32,34 @@ Route::group(['prefix'=>'user'], function(){
     Route::post('login',[UserController::class,'postLogin']);
     Route::get('signup',[UserController::class,'getSignup']);
     Route::post('signup',[UserController::class,'postSignup']);
-    Route::get('listUser',[UserController::class,'getAllUser']);
+    Route::get('logout',[UserController::class,'getLogout']);
+    Route::get('index',[UserController::class,'userindex']);
 });
 Route::group(['prefix' =>'admin'], function(){
-    Route::get('addcategory/',[CategoryController::class,'getAddCategory']);
-    Route::post('addcategory/',[CategoryController::class,'postAddCategory']);
-    Route::get('listcategory',[CategoryController::class,'listcategory']);
+    Route::get('managecategory/',[CategoryController::class,'getAddCategory']);
+    Route::post('managecategory/',[CategoryController::class,'postAddCategory']);
     Route::get('editcategory/{category_id}',[CategoryController::class,'getEditCategory']);
     Route::post('editcategory/{category_id}',[CategoryController::class,'postEditCategory']);
-    Route::get('delete/{category_id}',[CategoryController::class,'deleteCategory']);
+    Route::get('deletecategory/{category_id}',[CategoryController::class,'deleteCategory']);
+    Route::get('managecategory',[CategoryController::class,'listcategory']);
+    
+    
+    Route::get('login',[UserController::class,'getLogin']);
+    Route::post('login',[UserController::class,'postLogin']);
+    Route::get('manageuser',[UserController::class,'getAllUser']);
+    Route::get('logout',[UserController::class,'getLogout']);
+    Route::get('index',[UserController::class,'adminindex']);
+    
+    Route::get('deleteuser/{user_id}',[UserController::class,'deleteUser']);
+
+
 });
 Route::group(['prefix' =>'admin'], function(){
-    Route::get('addproduct/',[CategoryController::class,'getAddProduct']);
-    Route::post('addproduct/',[CategoryController::class,'postAddProduct']);
-    Route::get('listproduct',[CategoryController::class,'listProduct']);
-    Route::get('editproduct/{product_id}',[CategoryController::class,'getEditProduct']);
-    Route::post('editproduct/{product_id}',[CategoryController::class,'postEditProduct']);
-    Route::get('delete/{product_id}',[CategoryController::class,'deleteProduct']);
+    Route::get('manageproduct/',[ProductController::class,'getAddProduct']);
+    Route::post('manageproduct/',[ProductController::class,'postAddProduct']);
+    Route::get('manageproduct',[ProductController::class,'listProduct']);
+    Route::get('manageproduct/{product_id}',[ProductController::class,'getEditProduct']);
+    Route::post('manageproduct/{product_id}',[ProductController::class,'postEditProduct']);
+    Route::get('deleteproduct/{product_id}',[ProductController::class,'deleteProduct']);
+    Route::get('product-details',[ProductController::class,'ProductDetail']);
 });
