@@ -89,8 +89,8 @@
                             <td>{{ $value->product_des}}</td>
                             <td>{{ $value->category_id}}</td>
                             <td>
-                               <a href="{{asset('admin/edit/'.$value->user_id)}}" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Edit</a>
-                               <a href="{{asset('admin/delete/'.$value->user_id)}}" onclick="return confirm('Bạn có chắc muốn xóa?')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> </span>Delete</a>
+                               <a href="{{asset('admin/editproduct/'.$value->product_id)}}" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Edit</a>
+                               <a href="{{asset('admin/deleteproduct/'.$value->product_id)}}" onclick="return confirm('Bạn có chắc muốn xóa?')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> </span>Delete</a>
                             </td>
                         </tr>
                     @endforeach

@@ -58,8 +58,8 @@ Route::group(['prefix' =>'admin'], function(){
     Route::get('manageproduct/',[ProductController::class,'getAddProduct']);
     Route::post('manageproduct/',[ProductController::class,'postAddProduct']);
     Route::get('manageproduct',[ProductController::class,'listProduct']);
-    Route::get('manageproduct/{product_id}',[ProductController::class,'getEditProduct']);
-    Route::post('manageproduct/{product_id}',[ProductController::class,'postEditProduct']);
+    Route::get('editproduct/{product_id}',[ProductController::class,'getEditProduct']);
+    Route::post('editproduct/{product_id}',[ProductController::class,'postEditProduct']);
     Route::get('deleteproduct/{product_id}',[ProductController::class,'deleteProduct']);
-    Route::get('product-details',[ProductController::class,'ProductDetail']);
+    Route::get('product-details/{product_id}',[ProductController::class,'ProductDetail']);
 });

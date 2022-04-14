@@ -13,8 +13,10 @@ use App\Http\Requests\EditProductRequest;
 
 class ProductController extends Controller
 {
-    public function ProductDetail(){
-        return view('admin.pages.product.product-details');
+    public function ProductDetail($product_id){
+        $data = Product::find($product_id);
+        $category=Category::all();
+        return view('admin.pages.product.product-details',compact('data','category'));
     }
 
 
@@ -35,30 +37,43 @@ class ProductController extends Controller
         $product = new Product;
         $product->product_name = $request->product_name;
         $product->product_price = $request->product_price;
-        $product->product_image = $request->product_image;
+        if ($request->hasFile('product_image')) {
+            $file = $request->file('product_image');
+            $path = public_path('/img/');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move($path, $filename);
+        }
+        $product->product_image = $filename;
         $product->product_des = $request->product_des;
         $product->category_id = $request->category_id;
         $product->save();
         return redirect()->intended('admin/manageproduct');
 
     }
-    public function getEditProduct($category_id)
+    public function getEditProduct($product_id)
     {
         $data = Product::find($product_id);
-        return view('admin.pages.product.listproduct',['data'=>$data]);
+        $category=Category::all();
+        return view('admin.pages.product.editproduct',compact('data','category'));
     }
-    public function postEditProduct(EditProductRequest $request,$category_id)
+    public function postEditProduct(EditProductRequest $request,$product_id)
     {
-        $category = Category::find($product_id);
+        $product = Product::find($product_id);
         $product->product_name = $request->product_name;
         $product->product_price = $request->product_price;
-        $product->product_image = $request->product_image;
+        if ($request->hasFile('product_image')) {
+            $file = $request->file('product_image');
+            $path = public_path('/img/');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move($path, $filename);
+        }
+        $product->product_image = $filename;
         $product->product_des = $request->product_des;
         $product->category_id = $request->category_id;
-        $category->save();
-        return redirect()->intended('product/listproduct');
+        $product->save();
+        return redirect()->intended('admin/manageproduct');
     }
-    public function delete($category_id)
+    public function delete($product_id)
     {
         $product = Product::find($product_id);
         $product->delete();

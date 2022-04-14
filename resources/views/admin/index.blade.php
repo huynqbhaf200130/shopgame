@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
-    <!-- Hero Section Begin -->
+        <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
             <div class="hero__slider owl-carousel">
@@ -67,7 +67,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="../img/{{$pro['product_image']}}">
-                                        <img src="../img/{{$pro['product_image']}}" alt="">
+                                        <a href="{{asset('admin/product-details/'.$pro->product_id)}}"><img src="../img/{{$pro['product_image']}}" alt=""></a>
                                         <div class="ep">Cao cấp</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>

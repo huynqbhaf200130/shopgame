@@ -1,4 +1,4 @@
-@extends('user.layouts.master')
+@extends('admin.layouts.master')
 @section('content')
     <!-- Hero Section Begin -->
     <section class="hero">
@@ -16,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__items set-bg" data-setbg="{{asset('img/hero/hero-1.jpg')}}">
+                <div class="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__items set-bg" data-setbg="{{asset('img/hero/hero-1.jpg')}}">
+                <div class="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="col-lg-8 col-md-8 col-sm-8">
                                 <div class="section-title">
-                                    <h4>Trending Now</h4>
+                                    <h4>HOT</h4>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
@@ -63,102 +63,29 @@
                             </div>
                         </div>
                         <div class="row">
+                            @foreach($product as $pro)
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="{{asset('img/trending/trend-1.jpg')}}">
-                                        <div class="ep">18 / 18</div>
+                                    <div class="product__item__pic set-bg" data-setbg="../img/{{$pro['product_image']}}">
+                                        <img src="../img/{{$pro['product_image']}}" alt="">
+                                        <div class="ep">Cao cấp</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
+                                        <ul class="tren">
+                                            <li>Hot</li>
+                                            <li>Rẻ</li>
                                         </ul>
-                                        <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                        <ul class="duoi">
+                                            <li><h5><a href="#">{{$pro->product_name}}</a></h5></li>
+                                            <li><img src="{{asset('img/cart.png')}}" alt=""></li>
+                                        </ul>
+                                        <h6 style="color:white">{{$pro->product_price}}$</h6>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-2.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Gintama Movie 2: Kanketsu-hen - Yorozuya yo Eien</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="../img/trending/trend-3.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Shingeki no Kyojin Season 3 Part 2</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="../img/trending/trend-4.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Fullmetal Alchemist: Brotherhood</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="../img/trending/trend-5.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Shiratorizawa Gakuen Koukou</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="../img/trending/trend-6.jpg">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Code Geass: Hangyaku no Lelouch R2</a></h5>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="popular__product">
