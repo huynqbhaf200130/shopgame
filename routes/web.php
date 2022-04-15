@@ -24,6 +24,9 @@ Route::group(['prefix'=>'user'], function(){
     Route::post('signup',[UserController::class,'postSignup']);
     Route::get('logout',[UserController::class,'getLogout']);
     Route::get('index',[UserController::class,'userindex']);
+
+
+    //cart
 });
 Route::group(['prefix' =>'admin'], function(){
     Route::get('managecategory/',[CategoryController::class,'getAddCategory']);
@@ -53,3 +56,6 @@ Route::group(['prefix' =>'admin'], function(){
     Route::get('deleteproduct/{product_id}',[ProductController::class,'deleteProduct']);
     Route::get('product-details/{product_id}',[ProductController::class,'ProductDetail']);
 });
+
+
+
