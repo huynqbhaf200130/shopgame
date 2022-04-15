@@ -16,16 +16,6 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('index', function () {
-    return view('index');
-});
-
-Route::group(['prefix'=>''], function(){
-    Route::get('login',[UserController::class,'getLogin']);
-    Route::post('login',[UserController::class,'postLogin']);
-    Route::get('signup',[UserController::class,'getSignup']);
-    Route::post('signup',[UserController::class,'postSignup']);
-});
 
 Route::group(['prefix'=>'user'], function(){
     Route::get('login',[UserController::class,'getLogin']);

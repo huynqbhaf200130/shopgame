@@ -73,7 +73,7 @@ class ProductController extends Controller
         $product->save();
         return redirect()->intended('admin/manageproduct');
     }
-    public function delete($product_id)
+    public function deleteProduct($product_id)
     {
         $product = Product::find($product_id);
         $product->delete();

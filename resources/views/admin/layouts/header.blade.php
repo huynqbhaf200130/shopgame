@@ -23,6 +23,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/slicknav.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+
+    
     
     
 </head>

@@ -11,8 +11,8 @@ use App\Models\Product;
 class UserController extends Controller
 {
     public function userindex()
-    {
-        return view('user.index');
+    {   $product1=Product::all();
+        return view('user.index',compact('product1'));
     }
     public function adminindex()
     {

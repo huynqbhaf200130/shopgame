@@ -42,7 +42,7 @@ class CategoryController extends Controller
         $category->save();
         return redirect()->intended('admin/managecategory');
     }
-    public function delete($category_id)
+    public function deleteCategory($category_id)
     {
         $category = Category::find($category_id);
         $category->delete();
