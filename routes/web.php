@@ -5,7 +5,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 
-
+Route::get('/', function () {
+    return view('user.index');
+});
 
 
 Route::group(['prefix'=>'user'], function(){
