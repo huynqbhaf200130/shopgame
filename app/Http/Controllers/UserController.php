@@ -11,13 +11,13 @@ use App\Models\Product;
 class UserController extends Controller
 {
     public function userindex()
-    {   $product=Product::all();
-        return view('user.index',compact('product'));
+    {   $products=Product::all();
+        return view('user.index',compact('products'));
     }
     public function adminindex()
     {
-        $product=Product::all();
-        return view('admin.index', compact('product'));
+        $products=Product::all();
+        return view('admin.index', compact('products'));
     }
     public function getLogin()
     {

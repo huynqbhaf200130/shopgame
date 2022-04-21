@@ -273,6 +273,11 @@ ol {
 	background: #323232;
 	text-align: center;
 	cursor: pointer;
+	padding: 20px 0px !important;
+}
+
+ .search-switch .icon_search{
+	padding: 0px 10px !important;
 }
 
 .search-model {

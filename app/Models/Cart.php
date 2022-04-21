@@ -12,4 +12,13 @@ class Cart extends Model
     protected $fillable=['product_id','user_id'];
     protected $primaryKey ='cart_id';
     public $timestamps=false;
+    
+    public function product(){
+        return $this->hasMany(Product::class);
+    }
+
+    public function user(){
+        return $this->belongsToMany(User::class);
+    }
 }
+

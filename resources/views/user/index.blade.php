@@ -39,7 +39,7 @@
                 <div class="col-lg-12">
                     <div class="trending__product">
                         <div class="row">
-                            @foreach($product as $pro)
+                            @foreach($products as $pro)
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="../img/{{$pro['product_image']}}">
@@ -54,7 +54,14 @@
                                         </ul>
                                         <ul class="duoi">
                                             <li><h5><a href="#">{{$pro->product_name}}</a></h5></li>
-                                            <li><img src="{{asset('img/cart.png')}}" alt="" style="margin-left: 165px;"></li>
+                                            <li>
+                                                <form action="{{ URL('user/cart')}}" method="post">
+                                                    @csrf
+                                                    <input type="hidden" value="{{$pro->product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="quantity">
+                                                    <button>add</button>
+                                                </form>
+                                            </li>
                                         </ul>
                                         <h6 style="color:white">{{$pro->product_price}}$</h6>
                                     </div>

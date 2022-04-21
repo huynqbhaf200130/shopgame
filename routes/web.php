@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\SearchController;
 
 Route::get('/', function () {
     return view('user.index');
@@ -20,6 +22,10 @@ Route::group(['prefix'=>'user'], function(){
 
 
     //cart
+    Route::get('cart',[CartController::class,'Addtocart']);
+    Route::post('cart',[CartController::class,'Addtocart']);
+    Route::get('cart',[CartController::class,'showcart']);
+    Route::get('deletecart/{cart_id}',[CartController::class,'deleteCart']);
 });
 Route::group(['prefix' =>'admin'], function(){
     Route::get('managecategory/',[CategoryController::class,'getAddCategory']);
@@ -51,4 +57,5 @@ Route::group(['prefix' =>'admin'], function(){
 });
 
 
+Route::get('search',[SearchController::class,'search']);
 

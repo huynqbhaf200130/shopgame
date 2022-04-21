@@ -37,23 +37,27 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="index">Home</a></li>
                                 <li><a href="./categories.html">Product</a></li>
                                 <li><a href="./blog.html">Blog</a></li>
-                                <li><a href="#">Cart</a></li>
+                                <li><a href="cart">Cart</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-4">
                     <div class="header__menu">
                     <ul>
-                    <li><a href="#" class="search-switch"><span class="icon_search"></span></a></li>
-                    <li><a href="login"><span class="icon_profile"></span><span class="arrow_carrot-down"></span></a>
+                    <li>
+                    <form action="{{ url('search') }}">
+                        <a href="#" class="search-switch" style="padding: 20px 0"><span style="padding: 0 10px" class="icon_search" type="submit"></span><input type="search" name="query" placeholder="Search for products"></a>
+                    </form>
+                    </li>
+                    <li><a href="login" style="padding: 20px 0"><span class="icon_profile"></span><span class="arrow_carrot-down"></span></a>
                         <ul class="dropdown">
                                         @if(Auth::check())
                                         <li><a href="logout">Log out</a></li>
