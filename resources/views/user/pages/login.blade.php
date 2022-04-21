@@ -22,7 +22,7 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Login</h3>
-                        <form action="#" method="post">
+                        <form action="" method="post">
                             @csrf
                             <div class="input__item">
                                 <input type="text" placeholder="Username" name="username">
