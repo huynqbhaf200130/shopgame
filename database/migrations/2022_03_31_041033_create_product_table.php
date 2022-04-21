@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('product_id');
             $table->string('product_name',100);
             $table->float('product_price');
-            $table->integer('quantity');
+            $table->string('product_image');
             $table->string('product_des',200);
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('category_id')->on('category');

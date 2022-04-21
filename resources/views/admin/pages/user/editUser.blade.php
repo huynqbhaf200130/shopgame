@@ -7,15 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-<form role ="form" action="" method="POST">
+<form role ="form" action="" method="post">
                     @csrf
                     <fieldset class="form-group">
                         <label>Name</label>
-                        <input class="form-control" name="category_name" placeholder="Nhập tên category">
+                        <input class="form-control" name="category_name" placeholder="Nhập tên category" value="{{$user->category_name}}">
                         <label>Description</label>
-                        <input class="form-control" name="description" placeholder="Nhập tên category">
+                        <input class="form-control" name="description" placeholder="Nhập tên category" value="{{$user->description}}">
                     </fieldset>
-
                     <button type="submit" class="btn btn-success">Submit Button</button>
                     <button type="reset" class="btn btn-primary">Reset Button</button>
                 </form>

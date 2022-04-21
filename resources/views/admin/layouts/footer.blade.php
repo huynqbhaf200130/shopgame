@@ -7,22 +7,22 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    <a href="./index.html"><img src="{{asset('img/logo.jpg')}}" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="./index.html">Homepage</a></li>
-                        <li><a href="./categories.html">Categories</a></li>
-                        <li><a href="./blog.html">Our Blog</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li><a href="./categories.html">Product</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="#">Cart</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3">
                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="http://localhost/shopgame/public/" target="_blank">ShopGame</a>
                   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 
               </div>
@@ -43,14 +43,15 @@
 <!-- Search model end -->
 
 <!-- Js Plugins -->
-<script src="asset{{'../resources/js/jquery-3.3.1.min.js'}}"></script>
-<script src="asset{{'../resources/js/bootstrap.min.js'}}"></script>
-<script src="asset{{'../resources/js/player.js'}}"></script>
-<script src="asset{{'../resources/js/jquery.nice-select.min.js'}}"></script>
-<script src="asset{{'../resources/js/mixitup.min.js'}}"></script>
-<script src="asset{{'../resources/js/jquery.slicknav.js'}}"></script>
-<script src="asset{{'../resources/js/owl.carousel.min.js'}}"></script>
-<script src="asset{{'../resources/js/main.js'}}"></script>
+<script src="asset{{'js/jquery-3.3.1.min.js'}}"></script>
+<script src="asset{{'js/bootstrap.min.js'}}"></script>
+<script src="asset{{'js/player.js'}}"></script>
+<script src="asset{{'js/jquery.nice-select.min.js'}}"></script>
+<script src="asset{{'js/mixitup.min.js'}}"></script>
+<script src="asset{{'js/jquery.slicknav.js'}}"></script>
+<script src="asset{{'js/owl.carousel.min.js'}}"></script>
+<script src="asset{{'js/main.js'}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
 </body>

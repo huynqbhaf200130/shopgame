@@ -273,6 +273,11 @@ ol {
 	background: #323232;
 	text-align: center;
 	cursor: pointer;
+	padding: 20px 0px !important;
+}
+
+ .search-switch .icon_search{
+	padding: 0px 10px !important;
 }
 
 .search-model {
@@ -660,7 +665,7 @@ ol {
 }
 
 .product__item__pic {
-	height: 325px;
+	height: 100%;
 	position: relative;
 	border-radius: 5px;
 }
@@ -709,7 +714,7 @@ ol {
 	margin-bottom: 10px;
 }
 
-.product__item__text ul li {
+.product__item__text .tren li {
 	list-style: none;
 	font-size: 10px;
 	color: #ffffff;
@@ -717,6 +722,12 @@ ol {
 	padding: 1px 10px;
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: 50px;
+	display: inline-block;
+}
+.product__item__text .duoi li {
+	list-style: none ;
+	color: #ffffff ;
+	padding: 1px 10px ;
 	display: inline-block;
 }
 
