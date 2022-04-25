@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="anime__details__btn">
-                                <a href="#" class="follow-btn"><img src="{{asset('img/cart.png')}}" alt=""> Add to cart</a>
+                                <a href="Cart.php" class="follow-btn"><img src="{{asset('img/cart.png')}}" alt=""> Add to cart</a>
                                 </div>
                             </div>
                         </div>
