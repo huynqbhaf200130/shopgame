@@ -14,9 +14,9 @@
                 <div class="footer__nav">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
-                        <li><a href="./categories.html">Product</a></li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="#">Cart</a></li>
+                        <li><a href="./Product.php">Product</a></li>
+                        
+                        <li><a href="Cart.php">Cart</a></li>
                     </ul>
                 </div>
             </div>

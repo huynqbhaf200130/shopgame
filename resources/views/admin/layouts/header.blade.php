@@ -52,8 +52,9 @@
                                         <li><a href="manageuser">User</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./blog.html">Blog</a></li>
-                                <li><a href="#">Cart</a></li>
+                                <li><a href="Product.php">Product</a></li>
+                             
+                                <li><a href="Cart.php">Cart</a></li>
                             </ul>
                         </nav>
                     </div>

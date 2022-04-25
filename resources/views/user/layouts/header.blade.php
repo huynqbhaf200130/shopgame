@@ -42,7 +42,7 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="index">Home</a></li>
-                                <li><a href="./categories.html">Product</a></li>
+                                <li><a href="Product.php">Product</a></li>
                                 <li><a href="./blog.html">Blog</a></li>
                                 <li><a href="cart">Cart</a></li>
                             </ul>

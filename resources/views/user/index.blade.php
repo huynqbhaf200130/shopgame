@@ -3,32 +3,57 @@
 <div id="demo" class="carousel slide" data-ride="carousel">
 
 <!-- Indicators -->
-<ul class="carousel-indicators">
-  <li data-target="#demo" data-slide-to="0" class="active"></li>
-  <li data-target="#demo" data-slide-to="1"></li>
-  <li data-target="#demo" data-slide-to="2"></li>
-</ul>
-
-<!-- The slideshow -->
-<center><div class="carousel-inner">
-  <div class="carousel-item active">
-    <img src="{{asset('img/hero/hero-1.jpg')}}" alt="Los Angeles">
-  </div>
-  <div class="carousel-item">
-    <img src="{{asset('img/hero/hero-1.jpg')}}" alt="Chicago">
-  </div>
-  <div class="carousel-item">
-    <img src="{{asset('img/hero/hero-1.jpg')}}" alt="New York">
-  </div>
-</div></center>
-
-<!-- Left and right controls -->
-<a class="carousel-control-prev" href="#demo" data-slide="prev">
-  <span class="carousel-control-prev-icon"></span>
-</a>
-<a class="carousel-control-next" href="#demo" data-slide="next">
-  <span class="carousel-control-next-icon"></span>
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\bootstrap\css\bootstrap.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style type="text/css">
+        .carousel-inner img {
+            width: 100%;
+            height: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-top: 50px" class="container">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://cdn.nguyenkimmall.com/images/companies/_1/tin-tuc/review/game/pubg-playerunknown%E2%80%99s-battlegrounds.jpg" alt="" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="https://wall.vn/wp-content/uploads/2020/04/hinh-nen-game-dep-12.jpg" alt="" width="1100" height="500">   
+            </div>
+            <div class="carousel-item">
+                <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2021/07/gioi-thieu-new-world-1.jpg" alt="" width="1100" height="500">  
+            </div>
+            <div class="carousel-item">
+                <img src="https://haycafe.vn/wp-content/uploads/2021/11/Hinh-anh-Truy-Kich-dep-chat-nhat.jpg" alt="" width="1100" height="500"> 
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+</body>
+</html>
 
 </div>
 
@@ -59,7 +84,7 @@
                                                     @csrf
                                                     <input type="hidden" value="{{$pro->product_id}}" name="product_id">
                                                     <input type="hidden" value="1" name="quantity">
-                                                    <button>add</button>
+                                                    <button>add to cart</button>
                                                 </form>
                                             </li>
                                         </ul>
